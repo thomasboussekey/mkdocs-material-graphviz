@@ -30,6 +30,7 @@ COPY MANIFEST.in MANIFEST.in
 COPY package.json package.json
 COPY requirements.txt requirements.txt
 COPY setup.py setup.py
+COPY markdown-inline-graphviz markdown-inline-graphviz
 
 # Perform build and cleanup artifacts
 RUN \
@@ -38,6 +39,7 @@ RUN \
     git-fast-import \
     openssh \
   && python setup.py install 2>/dev/null \
+  && python markdown-inline-graphviz/setup.py install 2>/dev/null \
   && rm -rf /tmp/*
 
 # Set working directory

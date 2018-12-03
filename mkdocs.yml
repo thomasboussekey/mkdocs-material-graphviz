@@ -73,6 +73,7 @@ extra:
 
 # Extensions
 markdown_extensions:
+  - inline_graphviz
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       guess_lang: false
